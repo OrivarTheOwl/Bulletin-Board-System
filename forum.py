@@ -4,25 +4,6 @@ current_user = ""
 all_posts = []
 
 
-# Function to initialize test user and their posts
-def initialize_test_user(users, all_posts):
-    current_user = "abc"
-    logged_in = True
-
-    # Ensure a clean slate for posts
-    users[current_user] = {"password": "123", "posts": []}
-
-    # Populate posts using the function's expected format
-    for post_content in ["msg1", "msg2", "msg3", "msg4", "msg5", "msg6", "msg7", "msg8", "msg9", "msg10", "msg11", "msg12"]:
-        users[current_user]["posts"].append(f"{current_user}: {post_content}")
-        all_posts.append(f"{current_user}: {post_content}")
-
-    return current_user, logged_in, users, all_posts
-
-# Uncomment the line below to initialize the test user when needed
-current_user, logged_in, users, all_posts = initialize_test_user(users, all_posts)
-
-
 # Creates a user account
 def register():
     username = input("Enter a username: ")
